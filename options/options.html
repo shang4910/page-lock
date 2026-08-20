@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Lock - 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Page Lock</h1>
+          <p>页面锁定设置</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#general" class="nav-item active" data-section="general">常规设置</a>
+        <a href="#autolock" class="nav-item" data-section="autolock">自动锁定</a>
+        <a href="#about" class="nav-item" data-section="about">关于</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Welcome Banner -->
+      <div class="welcome-banner" id="welcomeBanner">
+        <div class="welcome-content">
+          <h2>🎉 欢迎使用 Page Lock!</h2>
+          <p>这是一个轻量级页面锁定工具，可以帮你锁定网页，防止意外编辑。</p>
+        </div>
+        <button class="welcome-close" id="welcomeClose">✕</button>
+      </div>
+
+      <!-- General Section -->
+      <section class="section active" id="section-general">
+        <h2 class="section-title">常规设置</h2>
+        <p class="section-desc">配置 Page Lock 的基本行为</p>
+
+        <div class="setting-group">
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">显示锁定提示条</span>
+              <span class="setting-desc">锁定页面时在顶部显示提示横幅</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="showBanner" checked>
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">默认锁定状态</span>
+              <span class="setting-desc">打开新页面时是否默认锁定</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="defaultLock">
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <h3 class="group-title">键盘快捷键</h3>
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">切换锁定</span>
+              <span class="setting-desc">在当前页面锁定/解锁之间切换</span>
+            </div>
+            <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">L</kbd>
+          </div>
+          <p class="hint">如需修改快捷键，请在 Edge 的扩展快捷键设置页面操作</p>
+        </div>
+      </section>
+
+      <!-- Auto Lock Section -->
+      <section class="section" id="section-autolock">
+        <h2 class="section-title">自动锁定</h2>
+        <p class="section-desc">配置自动锁定规则，匹配的页面将自动锁定</p>
+
+        <div class="setting-group">
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">启用自动锁定</span>
+              <span class="setting-desc">访问匹配的 URL 时自动锁定页面</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="autoLock">
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <h3 class="group-title">URL 匹配规则</h3>
+          <p class="hint">每行一个 URL 模式（支持部分匹配）</p>
+          <textarea id="autoLockUrls" class="textarea" rows="6" placeholder="例如：&#10;https://cloud.tencent.com/document&#10;docs.google.com&#10;notion.so"></textarea>
+        </div>
+
+        <div class="setting-group">
+          <h3 class="group-title">预设规则</h3>
+          <div class="preset-list">
+            <button class="preset-btn" data-url="cloud.tencent.com/document">腾讯云文档</button>
+            <button class="preset-btn" data-url="docs.google.com">Google Docs</button>
+            <button class="preset-btn" data-url="notion.so">Notion</button>
+            <button class="preset-btn" data-url="yuque.com">语雀</button>
+            <button class="preset-btn" data-url="zhihu.com">知乎</button>
+            <button class="preset-btn" data-url="juejin.cn">掘金</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section" id="section-about">
+        <h2 class="section-title">关于</h2>
+        <p class="section-desc">Page Lock 页面锁定扩展</p>
+
+        <div class="about-card">
+          <div class="about-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <div class="about-info">
+            <h3>Page Lock</h3>
+            <p class="version">版本 1.0.0</p>
+            <p class="description">一个轻量级的 Edge 浏览器页面锁定工具。当你需要专注于阅读文档、防止意外编辑时使用。</p>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="feature-icon">🚫</span>
+            <span class="feature-title">禁止插入</span>
+            <span class="feature-desc">阻止在页面中插入新内容</span>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🚫</span>
+            <span class="feature-title">禁止拖拽</span>
+            <span class="feature-desc">阻止拖拽页面元素</span>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🚫</span>
+            <span class="feature-title">禁止编辑</span>
+            <span class="feature-desc">将可编辑区域设为只读</span>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">✅</span>
+            <span class="feature-title">允许复制</span>
+            <span class="feature-desc">正常浏览和复制内容</span>
+          </div>
+        </div>
+
+        <div class="usage-tips">
+          <h3>使用说明</h3>
+          <ol>
+            <li>点击 Edge 工具栏上的 Page Lock 图标可以锁定/解锁当前页面</li>
+            <li>使用快捷键 <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">L</kbd> 快速切换</li>
+            <li>锁定后页面顶部会显示提示横幅</li>
+            <li>可以在设置中配置自动锁定规则</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

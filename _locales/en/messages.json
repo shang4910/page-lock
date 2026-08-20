@@ -1,0 +1,122 @@
+{
+  "extensionName": {
+    "message": "Page Lock",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Lock the current page to only allow browsing and copying, preventing insertion, editing, and dragging of content.",
+    "description": "Extension description"
+  },
+  "popupTitle": {
+    "message": "Page Lock",
+    "description": "Popup title"
+  },
+  "popupSubtitle": {
+    "message": "Page Locking Tool",
+    "description": "Popup subtitle"
+  },
+  "statusLocked": {
+    "message": "Page Locked",
+    "description": "Locked status text"
+  },
+  "statusUnlocked": {
+    "message": "Page Unlocked",
+    "description": "Unlocked status text"
+  },
+  "statusChecking": {
+    "message": "Checking...",
+    "description": "Checking status text"
+  },
+  "statusUnsupported": {
+    "message": "This page is not supported",
+    "description": "Unsupported page text"
+  },
+  "lockButton": {
+    "message": "Lock Page",
+    "description": "Lock button text"
+  },
+  "unlockButton": {
+    "message": "Unlock Page",
+    "description": "Unlock button text"
+  },
+  "featureBlockInsert": {
+    "message": "Block content insertion",
+    "description": "Feature description"
+  },
+  "featureBlockDrag": {
+    "message": "Block content dragging",
+    "description": "Feature description"
+  },
+  "featureBlockEdit": {
+    "message": "Block document editing",
+    "description": "Feature description"
+  },
+  "featureAllowCopy": {
+    "message": "Allow browsing & copying",
+    "description": "Feature description"
+  },
+  "shortcutLabel": {
+    "message": "Shortcut",
+    "description": "Shortcut label"
+  },
+  "settingsLink": {
+    "message": "Settings",
+    "description": "Settings link text"
+  },
+  "bannerLocked": {
+    "message": "🔒 Page Locked — Browsing & Copying Only",
+    "description": "Lock banner text"
+  },
+  "bannerHint": {
+    "message": "Press Ctrl+Shift+L or click toolbar icon to unlock",
+    "description": "Lock banner hint text"
+  },
+  "optionsTitle": {
+    "message": "Page Lock - Settings",
+    "description": "Options page title"
+  },
+  "optionsNavGeneral": {
+    "message": "General",
+    "description": "Options nav item"
+  },
+  "optionsNavAutoLock": {
+    "message": "Auto Lock",
+    "description": "Options nav item"
+  },
+  "optionsNavAbout": {
+    "message": "About",
+    "description": "Options nav item"
+  },
+  "settingShowBanner": {
+    "message": "Show lock banner",
+    "description": "Setting name"
+  },
+  "settingShowBannerDesc": {
+    "message": "Display a notification banner when page is locked",
+    "description": "Setting description"
+  },
+  "settingDefaultLock": {
+    "message": "Default lock state",
+    "description": "Setting name"
+  },
+  "settingDefaultLockDesc": {
+    "message": "Lock new pages by default",
+    "description": "Setting description"
+  },
+  "settingAutoLock": {
+    "message": "Enable auto lock",
+    "description": "Setting name"
+  },
+  "settingAutoLockDesc": {
+    "message": "Automatically lock pages matching URL patterns",
+    "description": "Setting description"
+  },
+  "welcomeTitle": {
+    "message": "🎉 Welcome to Page Lock!",
+    "description": "Welcome banner title"
+  },
+  "welcomeDesc": {
+    "message": "A lightweight page locking tool to prevent accidental edits.",
+    "description": "Welcome banner description"
+  }
+}

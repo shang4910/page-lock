@@ -1,0 +1,122 @@
+{
+  "extensionName": {
+    "message": "Page Lock - 页面锁定",
+    "description": "扩展名称"
+  },
+  "extensionDescription": {
+    "message": "锁定当前页面，仅支持浏览和复制，禁止插入、编辑、拖拽内容。适用于腾讯云文档等在线文档页面。",
+    "description": "扩展描述"
+  },
+  "popupTitle": {
+    "message": "Page Lock",
+    "description": "弹出窗口标题"
+  },
+  "popupSubtitle": {
+    "message": "页面锁定工具",
+    "description": "弹出窗口副标题"
+  },
+  "statusLocked": {
+    "message": "页面已锁定",
+    "description": "锁定状态文本"
+  },
+  "statusUnlocked": {
+    "message": "页面未锁定",
+    "description": "未锁定状态文本"
+  },
+  "statusChecking": {
+    "message": "检测中...",
+    "description": "检测中状态文本"
+  },
+  "statusUnsupported": {
+    "message": "此页面不支持锁定",
+    "description": "不支持页面文本"
+  },
+  "lockButton": {
+    "message": "锁定页面",
+    "description": "锁定按钮文本"
+  },
+  "unlockButton": {
+    "message": "解锁页面",
+    "description": "解锁按钮文本"
+  },
+  "featureBlockInsert": {
+    "message": "禁止插入内容",
+    "description": "功能描述"
+  },
+  "featureBlockDrag": {
+    "message": "禁止拖拽内容",
+    "description": "功能描述"
+  },
+  "featureBlockEdit": {
+    "message": "禁止编辑文档",
+    "description": "功能描述"
+  },
+  "featureAllowCopy": {
+    "message": "允许浏览和复制",
+    "description": "功能描述"
+  },
+  "shortcutLabel": {
+    "message": "快捷键",
+    "description": "快捷键标签"
+  },
+  "settingsLink": {
+    "message": "设置",
+    "description": "设置链接文本"
+  },
+  "bannerLocked": {
+    "message": "🔒 页面已锁定 — 仅可浏览和复制",
+    "description": "锁定提示条文本"
+  },
+  "bannerHint": {
+    "message": "按 Ctrl+Shift+L 或点击工具栏图标解锁",
+    "description": "锁定提示条提示文本"
+  },
+  "optionsTitle": {
+    "message": "Page Lock - 设置",
+    "description": "设置页面标题"
+  },
+  "optionsNavGeneral": {
+    "message": "常规设置",
+    "description": "设置导航项"
+  },
+  "optionsNavAutoLock": {
+    "message": "自动锁定",
+    "description": "设置导航项"
+  },
+  "optionsNavAbout": {
+    "message": "关于",
+    "description": "设置导航项"
+  },
+  "settingShowBanner": {
+    "message": "显示锁定提示条",
+    "description": "设置项名称"
+  },
+  "settingShowBannerDesc": {
+    "message": "锁定页面时在顶部显示提示横幅",
+    "description": "设置项描述"
+  },
+  "settingDefaultLock": {
+    "message": "默认锁定状态",
+    "description": "设置项名称"
+  },
+  "settingDefaultLockDesc": {
+    "message": "打开新页面时是否默认锁定",
+    "description": "设置项描述"
+  },
+  "settingAutoLock": {
+    "message": "启用自动锁定",
+    "description": "设置项名称"
+  },
+  "settingAutoLockDesc": {
+    "message": "访问匹配的 URL 时自动锁定页面",
+    "description": "设置项描述"
+  },
+  "welcomeTitle": {
+    "message": "🎉 欢迎使用 Page Lock!",
+    "description": "欢迎横幅标题"
+  },
+  "welcomeDesc": {
+    "message": "这是一个轻量级页面锁定工具，可以帮你锁定网页，防止意外编辑。",
+    "description": "欢迎横幅描述"
+  }
+}

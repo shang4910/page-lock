@@ -1,0 +1,24 @@
+{
+  "name": "page-lock",
+  "version": "1.0.0",
+  "description": "Edge 浏览器页面锁定扩展 - 锁定页面仅允许浏览和复制",
+  "private": true,
+  "scripts": {
+    "icons": "node scripts/generate-icons.js",
+    "build": "node scripts/build.js",
+    "package": "node scripts/build.js --package",
+    "lint": "echo 'No linter configured'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "edge",
+    "browser-extension",
+    "page-lock",
+    "productivity"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sharp": "^0.33.0"
+  }
+}

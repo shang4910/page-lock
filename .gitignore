@@ -1,0 +1,29 @@
+# 依赖
+node_modules/
+
+# 构建输出
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+npm-debug.log*
+
+# 环境
+.env
+.env.local
+
+# 打包文件
+*.crx
+*.pem
+*.zip

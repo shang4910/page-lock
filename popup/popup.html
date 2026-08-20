@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Lock</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+      <h1 class="header-title">Page Lock</h1>
+      <p class="header-subtitle">页面锁定工具</p>
+    </header>
+
+    <main class="main">
+      <div class="status-card" id="statusCard">
+        <div class="status-indicator" id="statusIndicator"></div>
+        <div class="status-info">
+          <span class="status-label" id="statusLabel">检测中...</span>
+          <span class="status-url" id="statusUrl"></span>
+        </div>
+      </div>
+
+      <button class="toggle-btn" id="toggleBtn">
+        <span class="toggle-btn-icon" id="toggleBtnIcon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </span>
+        <span class="toggle-btn-text" id="toggleBtnText">锁定页面</span>
+      </button>
+
+      <div class="features">
+        <div class="feature-item">
+          <span class="feature-icon">🚫</span>
+          <span class="feature-text">禁止插入内容</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🚫</span>
+          <span class="feature-text">禁止拖拽内容</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🚫</span>
+          <span class="feature-text">禁止编辑文档</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✅</span>
+          <span class="feature-text">允许浏览和复制</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span class="shortcut">快捷键: Ctrl+Shift+L</span>
+      <a href="../options/options.html" target="_blank" class="settings-link">设置</a>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
