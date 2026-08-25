@@ -1,70 +1,70 @@
-# Page Lock - Edge 页面锁定扩展
+# Page Lock - Edge Browser Extension
 
-一个轻量级的 Microsoft Edge 浏览器扩展，用于锁定当前页面，仅支持浏览和复制，禁止插入、编辑、拖拽内容。
+A lightweight Microsoft Edge browser extension that locks the current page, allowing only browsing and copying while blocking insertion, editing, and dragging of content.
 
-## ✨ 功能特性
+## Features
 
-- 🔒 **一键锁定** - 点击工具栏图标或按 `Ctrl+Shift+L` 锁定当前页面
-- 🚫 **禁止插入** - 阻止在页面中插入新内容
-- 🚫 **禁止拖拽** - 阻止拖拽页面元素
-- 🚫 **禁止编辑** - 将可编辑区域设为只读
-- ✅ **允许复制** - 正常浏览和复制内容
-- 🎯 **自动锁定** - 支持 URL 匹配规则，访问指定页面自动锁定
-- 🎨 **美观提示** - 锁定后顶部显示渐变提示横幅
+- **One-click Lock** - Click the toolbar icon or press `Ctrl+Shift+L` to lock the current page
+- **Block Insertion** - Prevent inserting new content into the page
+- **Block Dragging** - Prevent dragging page elements
+- **Block Editing** - Set editable areas to read-only
+- **Allow Copying** - Browse and copy content normally
+- **Auto Lock** - Support URL matching rules to auto-lock specified pages
+- **Beautiful Banner** - Gradient notification banner at the top when locked
 
-## 📦 安装方法
+## Installation
 
-### 开发者模式安装
+### Developer Mode
 
-1. 打开 Edge 浏览器，进入 `edge://extensions/`
-2. 开启左下角的 **开发人员模式**
-3. 点击 **加载解压缩的扩展**
-4. 选择本项目的 `page-lock` 文件夹
-5. 安装完成！工具栏会出现锁形图标
+1. Open Edge browser, go to `edge://extensions/`
+2. Enable **Developer mode** in the bottom left
+3. Click **Load unpacked**
+4. Select the `page-lock` folder
+5. Done! A lock icon will appear in the toolbar
 
-### 打包安装（可选）
+### Package (Optional)
 
-1. 在 `edge://extensions/` 页面点击 **打包扩展程序**
-2. 选择 `page-lock` 文件夹
-3. 生成 `.crx` 文件和 `.pem` 私钥文件
+1. On `edge://extensions/`, click **Pack extension**
+2. Select the `page-lock` folder
+3. Generate `.crx` file and `.pem` private key
 
-## 🚀 使用方法
+## Usage
 
-### 手动锁定/解锁
+### Manual Lock/Unlock
 
-- **方式一**：点击 Edge 工具栏上的 Page Lock 图标
-- **方式二**：按快捷键 `Ctrl+Shift+L`（Mac: `Cmd+Shift+L`）
+- **Method 1**: Click the Page Lock icon in the Edge toolbar
+- **Method 2**: Press `Ctrl+Shift+L` (Mac: `Cmd+Shift+L`)
 
-### 自动锁定
+### Auto Lock
 
-1. 点击扩展图标 → 设置（或右键扩展图标 → 选项）
-2. 进入 **自动锁定** 页面
-3. 开启 **启用自动锁定**
-4. 添加 URL 匹配规则（每行一个），例如：
+1. Click extension icon → Settings (or right-click → Options)
+2. Go to **Auto Lock** page
+3. Enable **Enable auto lock**
+4. Add URL matching rules (one per line), e.g.:
    ```
    cloud.tencent.com/document
    docs.google.com
    notion.so
    ```
-5. 点击预设按钮快速添加常用站点
+5. Click preset buttons to quickly add common sites
 
-## 📁 项目结构
+## Project Structure
 
 ```
 page-lock/
-├── manifest.json          # 扩展清单文件 (Manifest V3)
-├── background.js          # 后台 Service Worker
-├── content.js             # 内容脚本（核心锁定逻辑）
-├── content.css            # 锁定状态样式
-├── popup/                 # 弹出窗口
+├── manifest.json          # Extension manifest (Manifest V3)
+├── background.js          # Background Service Worker
+├── content.js             # Content script (core lock logic)
+├── content.css            # Lock state styles
+├── popup/                 # Popup window
 │   ├── popup.html
 │   ├── popup.js
 │   └── popup.css
-├── options/               # 设置页面
+├── options/               # Settings page
 │   ├── options.html
 │   ├── options.js
 │   └── options.css
-├── icons/                 # 图标文件
+├── icons/                 # Icon files
 │   ├── icon16.png
 │   ├── icon32.png
 │   ├── icon48.png
@@ -73,44 +73,52 @@ page-lock/
 │   ├── icon32-locked.png
 │   ├── icon48-locked.png
 │   └── icon128-locked.png
-└── README.md
+├── privacy.html           # Privacy policy (English)
+├── privacy.zh.html        # Privacy policy (Chinese)
+├── README.md              # This file (English)
+└── README.zh.md           # README (Chinese)
 ```
 
-## 🔧 技术实现
+## Technical Implementation
 
-### 锁定机制
+### Lock Mechanism
 
-| 拦截方式 | 说明 |
-|---------|------|
-| `dragstart` | 阻止拖拽开始 |
-| `drop` / `dragover` | 阻止拖放操作 |
-| `keydown` | 拦截输入（保留复制快捷键） |
-| `paste` / `cut` | 阻止粘贴和剪切 |
-| `beforeinput` | 拦截所有输入事件 |
-| `MutationObserver` | 监听并移除 `contenteditable` 属性 |
-| CSS `user-drag` | 全局禁止拖拽样式 |
-| CSS `user-modify` | 全局禁止编辑样式 |
+| Interception Method | Description |
+|---------------------|-------------|
+| `dragstart` | Block drag start |
+| `drop` / `dragover` | Block drag-and-drop operations |
+| `keydown` | Intercept input (preserve copy shortcuts) |
+| `paste` / `cut` | Block paste and cut |
+| `beforeinput` | Intercept all input events |
+| `MutationObserver` | Listen and remove `contenteditable` attributes |
+| CSS `user-drag` | Global drag prevention style |
+| CSS `user-modify` | Global edit prevention style |
 
-### 存储
+### Storage
 
-- `chrome.storage.local` - 持久化用户设置
-- `chrome.storage.session` - 会话级锁定状态
+- `chrome.storage.local` - Persistent user settings
+- `chrome.storage.session` - Session-level lock state
 
-## 🌐 适用场景
+## Use Cases
 
-- 📄 腾讯云文档、阿里云文档等在线文档
-- 📝 Google Docs、Notion、语雀等协作平台
-- 📚 知乎、掘金、CSDN 等技术博客
-- 🏢 企业内部知识库、Wiki 系统
-- 📋 任何需要防止意外编辑的网页
+- Online documents (Tencent Cloud Docs, Alibaba Cloud Docs, etc.)
+- Collaboration platforms (Google Docs, Notion, Yuque, etc.)
+- Tech blogs (Zhihu, Juejin, CSDN, etc.)
+- Corporate knowledge bases, Wiki systems
+- Any webpage where accidental editing should be prevented
 
-## ⚠️ 注意事项
+## Notes
 
-- 本扩展仅在客户端层面提供保护，无法阻止有意的开发者工具操作
-- 部分网站可能使用特殊的内容编辑框架，锁定效果可能有限
-- 锁定状态下仍可正常浏览、滚动和复制内容
-- 不支持 `chrome://` 和 `edge://` 等浏览器内置页面
+- This extension only provides client-side protection and cannot prevent intentional DevTools operations
+- Some websites may use special content editing frameworks where lock effectiveness may be limited
+- Browsing, scrolling, and copying work normally when locked
+- Does not support browser internal pages like `chrome://` and `edge://`
 
-## 📄 许可证
+## License
 
 MIT License
+
+## Languages
+
+- [中文文档](README.zh.md)
+- [中文隐私政策](privacy.zh.html)

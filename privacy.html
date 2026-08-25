@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Lock - 隐私政策</title>
+  <title>Page Lock - Privacy Policy</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -88,73 +88,73 @@
 </head>
 <body>
   <div class="container">
-    <h1>🔒 Page Lock 隐私政策</h1>
-    <p class="subtitle">最后更新：2025年1月 | 版本 1.0.0</p>
+    <h1>Page Lock Privacy Policy</h1>
+    <p class="subtitle">Last Updated: January 2025 | Version 1.0.0</p>
 
-    <h2>概述</h2>
-    <p>Page Lock（以下简称"本扩展"）是一个轻量级的 Microsoft Edge 浏览器扩展，用于锁定网页页面以防止意外编辑。<strong>本扩展不收集、存储或传输任何个人数据。</strong></p>
+    <h2>Overview</h2>
+    <p>Page Lock ("this extension") is a lightweight Microsoft Edge browser extension that locks web pages to prevent accidental editing. <strong>This extension does not collect, store, or transmit any personal data.</strong></p>
 
     <div class="highlight">
-      <p>🔒 核心承诺</p>
-      <p style="color: #555; font-weight: 400;">我们不会收集您的任何个人数据。所有设置均存储在您的本地浏览器中。</p>
+      <p>Core Commitment</p>
+      <p style="color: #555; font-weight: 400;">We do not collect any of your personal data. All settings are stored in your local browser only.</p>
     </div>
 
-    <h2>数据收集声明</h2>
-    <p><span class="badge badge-green">不收集</span><strong>本扩展不收集任何用户数据，</strong>包括但不限于：</p>
+    <h2>Data Collection Statement</h2>
+    <p><span class="badge badge-green">No Collection</span><strong>This extension does not collect any user data,</strong> including but not limited to:</p>
     <ul>
-      <li>❌ 个人可识别信息（姓名、地址、电子邮件、年龄等）</li>
-      <li>❌ 健康信息</li>
-      <li>❌ 财务和支付信息</li>
-      <li>❌ 认证信息（密码、PIN码等）</li>
-      <li>❌ 个人通信（电子邮件、短信、聊天记录）</li>
-      <li>❌ 位置信息（IP地址、GPS坐标等）</li>
-      <li>❌ 网络历史</li>
-      <li>❌ 用户活动（点击、滚动、按键记录等）</li>
-      <li>❌ 网站内容</li>
+      <li>Personally identifiable information (name, address, email, age, etc.)</li>
+      <li>Health information</li>
+      <li>Financial and payment information</li>
+      <li>Authentication information (passwords, PINs, etc.)</li>
+      <li>Personal communications (emails, messages, chat records)</li>
+      <li>Location information (IP address, GPS coordinates, etc.)</li>
+      <li>Web browsing history</li>
+      <li>User activity (clicks, scrolling, key presses, etc.)</li>
+      <li>Website content</li>
     </ul>
 
-    <h2>权限使用说明</h2>
-    <p>本扩展请求以下权限，仅用于实现核心功能：</p>
+    <h2>Permission Justification</h2>
+    <p>This extension requests the following permissions, solely to implement its core functionality:</p>
 
     <h3><span class="badge badge-blue">activeTab</span></h3>
-    <p>用于获取当前活动标签页信息，以便向当前页面注入锁定脚本和样式。此权限不会读取页面内容或浏览历史。</p>
+    <p>Used to get the current active tab information so that the locking script and styles can be injected into the current page. This permission does not read page content or browsing history.</p>
 
     <h3><span class="badge badge-blue">storage</span></h3>
-    <p>用于保存用户的设置偏好，包括：</p>
+    <p>Used to save user preferences, including:</p>
     <ul>
-      <li>是否显示锁定提示条</li>
-      <li>自动锁定 URL 匹配规则</li>
-      <li>默认锁定状态</li>
+      <li>Whether to show the lock notification banner</li>
+      <li>Auto-lock URL matching rules</li>
+      <li>Default lock state</li>
     </ul>
-    <p>所有数据通过 <code>chrome.storage.local</code> API 存储，<strong>仅保存在用户本地浏览器中</strong>，不会上传到任何服务器。</p>
+    <p>All data is stored via the <code>chrome.storage.local</code> API, <strong>saved only in the user's local browser</strong>, and is not uploaded to any server.</p>
 
     <h3><span class="badge badge-blue">scripting</span></h3>
-    <p>用于向当前页面注入内容脚本（content script）和样式表，实现页面锁定功能。脚本会拦截拖拽、输入、粘贴等事件，并移除可编辑属性。</p>
+    <p>Used to inject content scripts and stylesheets into the current page to implement the page locking functionality. The script intercepts drag, input, and paste events, and removes editable attributes.</p>
 
     <h3><span class="badge badge-orange">&lt;all_urls&gt;</span></h3>
-    <p>扩展需要在所有网页上运行锁定功能。用户可以在任意网页上手动触发锁定，或配置自动锁定规则。扩展不会主动访问或修改任何远程服务器上的数据。</p>
+    <p>The extension needs to run the locking functionality on all web pages. Users can manually trigger locking on any page or configure auto-lock rules. The extension does not actively access or modify any data on remote servers.</p>
 
-    <h2>远程代码声明</h2>
-    <p><span class="badge badge-green">无远程代码</span>本扩展不包含任何远程代码。所有 JavaScript 和 CSS 代码均打包在扩展包中，不引用任何外部脚本文件，不使用 <code>eval()</code> 执行动态代码，不加载任何外部模块。</p>
+    <h2>Remote Code Declaration</h2>
+    <p><span class="badge badge-green">No Remote Code</span>This extension does not contain any remote code. All JavaScript and CSS code is packaged within the extension, does not reference any external script files, does not use <code>eval()</code> to execute dynamic code, and does not load any external modules.</p>
 
-    <h2>第三方数据共享</h2>
-    <p><span class="badge badge-green">不共享</span><strong>我们不会将任何数据出售或传输给第三方。</strong>由于本扩展不收集任何数据，因此不存在数据共享行为。</p>
+    <h2>Third-Party Data Sharing</h2>
+    <p><span class="badge badge-green">No Sharing</span><strong>We do not sell or transmit any data to third parties.</strong> Since this extension does not collect any data, there is no data sharing behavior.</p>
 
-    <h2>数据安全</h2>
-    <p>由于本扩展不收集、存储或传输任何用户数据，不存在数据泄露风险。所有本地设置数据由浏览器原生存储机制保护。</p>
+    <h2>Data Security</h2>
+    <p>Since this extension does not collect, store, or transmit any user data, there is no risk of data leakage. All local settings data is protected by the browser's native storage mechanism.</p>
 
-    <h2>政策更新</h2>
-    <p>如果我们更新本隐私政策，将在 GitHub 仓库中发布更新版本。重大变更将通过扩展更新通知用户。</p>
+    <h2>Policy Updates</h2>
+    <p>If we update this privacy policy, we will publish the updated version in the GitHub repository. Significant changes will be communicated to users via extension updates.</p>
 
-    <h2>联系我们</h2>
-    <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this privacy policy, please contact us via:</p>
     <ul>
       <li>GitHub Issues: <a href="https://github.com/shang4910/page-lock/issues" target="_blank">github.com/shang4910/page-lock/issues</a></li>
     </ul>
 
     <footer>
-      <p>Page Lock — 轻量级页面锁定扩展 | MIT License</p>
-      <p>Copyright © 2025 Page Lock Contributors</p>
+      <p>Page Lock - Lightweight Page Locking Extension | MIT License</p>
+      <p>Copyright 2025 Page Lock Contributors</p>
     </footer>
   </div>
 </body>
